@@ -1,0 +1,14 @@
+version: "3.7"
+
+services:
+  # docker-compose run app bash
+  # docker-compose run --service-ports app bash
+  app:
+    build: .
+    image: rust-matcher
+    container_name: matcher
+    # ports:
+    #   - "8080:8080"
+    # restart: on-failure
+    volumes:
+      - ".:/app"
